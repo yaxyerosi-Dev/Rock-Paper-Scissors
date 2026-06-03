@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rock Paper Scissors</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white flex items-center justify-center p-4">
+
+  <div class="bg-gray-800/80 w-full max-w-md rounded-3xl shadow-2xl p-8 text-center border border-gray-700">
+
+    <h1 class="text-4xl font-bold text-yellow-400 mb-2">
+      Rock Paper Scissors
+    </h1>
+
+    <p class="text-gray-300 mb-6">
+      First player to reach 3 wins becomes the champion 🏆
+    </p>
+
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div class="bg-gray-900 rounded-xl p-4">
+        <h2 class="text-blue-400 font-bold">You</h2>
+        <p id="userScore" class="text-3xl font-bold mt-2">0</p>
+      </div>
+
+      <div class="bg-gray-900 rounded-xl p-4">
+        <h2 class="text-red-400 font-bold">Computer</h2>
+        <p id="computerScore" class="text-3xl font-bold mt-2">0</p>
+      </div>
+    </div>
+
+    <div class="flex justify-center gap-4 mb-6">
+      <button class="choice bg-gray-900 hover:bg-blue-600 transition rounded-full w-20 h-20 text-4xl" data-choice="rock">
+        ✊
+      </button>
+
+      <button class="choice bg-gray-900 hover:bg-green-600 transition rounded-full w-20 h-20 text-4xl" data-choice="paper">
+        ✋
+      </button>
+
+      <button class="choice bg-gray-900 hover:bg-red-600 transition rounded-full w-20 h-20 text-4xl" data-choice="scissors">
+        ✌️
+      </button>
+    </div>
+
+    <div class="bg-gray-900 rounded-2xl p-5 mb-6">
+      <p class="text-gray-400 mb-2">Result</p>
+
+      <h2 id="resultText" class="text-2xl font-bold text-yellow-400">
+        First To 3 Wins!
+      </h2>
+
+      <div class="flex justify-center gap-8 mt-5">
+        <div>
+          <p class="text-sm text-gray-400">You</p>
+          <p id="userChoiceText" class="text-4xl mt-2">❔</p>
+        </div>
+
+        <div>
+          <p class="text-sm text-gray-400">Computer</p>
+          <p id="computerChoiceText" class="text-4xl mt-2">❔</p>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="resetBtn"
+      class="w-full bg-yellow-400 text-gray-900 py-3 rounded-xl font-bold hover:bg-yellow-500 transition"
+    >
+      Reset Game
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
